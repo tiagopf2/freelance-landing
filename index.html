@@ -738,7 +738,8 @@ form .btn{width:100%;margin-top:6px;font-size:16.5px;padding:15px 24px}
 
         <!-- Netlify Forms: the form is detected at deploy time and submissions show up
              under Forms in the Netlify dashboard. Only works on Netlify hosting. -->
-        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <form name="contact" method="POST" action="/thanks.html" data-netlify="true"
+              netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact">
           <div class="field-row">
             <div class="field">

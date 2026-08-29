@@ -22,6 +22,10 @@ Netlify dashboard, and you can turn on email notifications there.
 The hidden `bot-field` input is a spam trap. Netlify drops any submission that
 has it filled in.
 
+After submitting, people land on `thanks.html` rather than Netlify's own
+success page, which carries a "Powered by Netlify" badge. That is what the
+form's `action` is for. Keep it pointing at a real page in this repo.
+
 Note that this only works on Netlify hosting. On any other host the form will
 not submit.
 
