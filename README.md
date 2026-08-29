@@ -27,4 +27,12 @@ not submit.
 
 ## Deploying
 
-Hosted on Netlify.
+Netlify, connected to this repo. Import the repo in Netlify, leave the build
+command empty and set the publish directory to `.`, since there is nothing to
+build.
+
+**Turn on form detection or the contact form will not work.** New Netlify
+sites have it switched off, and the form fails silently. In the Netlify UI it
+is under Project configuration > Forms > Form detection. Redeploy after
+enabling it, then check Forms in the dashboard: the form is registered once
+`contact` shows up there.
