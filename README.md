@@ -29,6 +29,16 @@ form's `action` is for. Keep it pointing at a real page in this repo.
 Note that this only works on Netlify hosting. On any other host the form will
 not submit.
 
+## Pages
+
+- `index.html` is the landing page.
+- `thanks.html` is where the form sends people after they submit.
+- `404.html` replaces Netlify's default not-found page. Netlify serves it
+  automatically, no configuration needed.
+
+Both `thanks.html` and `404.html` are `noindex`, so they stay out of search
+results.
+
 ## Deploying
 
 Netlify, connected to this repo. Import the repo in Netlify, leave the build
