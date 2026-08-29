@@ -14,10 +14,17 @@ that still need filling in.
 
 ## Contact form
 
-The form posts to Formspree. Create a form at https://formspree.io and
-replace `YOUR_FORM_ID` in the form's `action` with the real endpoint id.
-Until then, submissions will fail.
+Uses Netlify Forms. Netlify parses the HTML at deploy time, spots the
+`data-netlify="true"` attribute and wires the form up on its own, so there is
+nothing to configure in the markup. Submissions appear under **Forms** in the
+Netlify dashboard, and you can turn on email notifications there.
+
+The hidden `bot-field` input is a spam trap. Netlify drops any submission that
+has it filled in.
+
+Note that this only works on Netlify hosting. On any other host the form will
+not submit.
 
 ## Deploying
 
-Served by GitHub Pages from the `main` branch.
+Hosted on Netlify.

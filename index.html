@@ -736,9 +736,10 @@ form .btn{width:100%;margin-top:6px;font-size:16.5px;padding:15px 24px}
           </ul>
         </div>
 
-        <!-- TODO(tiago): create a form at formspree.io, then replace YOUR_FORM_ID below
-             with your real endpoint id. Until you do, this form will not send anything. -->
-        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <!-- Netlify Forms: the form is detected at deploy time and submissions show up
+             under Forms in the Netlify dashboard. Only works on Netlify hosting. -->
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
           <div class="field-row">
             <div class="field">
               <label for="name">Your name</label>
@@ -775,8 +776,8 @@ form .btn{width:100%;margin-top:6px;font-size:16.5px;padding:15px 24px}
 
           <!-- spam trap: real people never fill this in -->
           <div class="hp" aria-hidden="true">
-            <label for="company-website">Leave this empty</label>
-            <input id="company-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+            <label for="bot-field">Leave this empty</label>
+            <input id="bot-field" name="bot-field" type="text" tabindex="-1" autocomplete="off">
           </div>
 
           <button class="btn" type="submit">
